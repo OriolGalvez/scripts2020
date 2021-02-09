@@ -1,14 +1,20 @@
 #! /bin/bash
 # @edt OriolGalvez
 # Febrer 2021
-# Exemple if
+# Exemple if: indica si es major d'edat
 #	$ prog edat
 # ------------------------------------------
-if [ $# -ne 1 ];
-	echo "Error: nª arguments incorrecte"
-	echo "Usage: $0 edat"
-	exit 1
+# 1) Validar arguments
+if [ $# -ne 1 ]
+then
+    echo "Error: nª arguments incorrecte"
+    echo "Usage: $0 edat"
+    exit 1
 fi
-
-echo $1
+# xixa
+edat=$1
+if [ $1 -ge 18 ]
+then
+    echo "Edat $edat major d'edat"
+fi
 exit 0
