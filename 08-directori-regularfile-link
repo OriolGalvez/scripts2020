@@ -8,7 +8,7 @@
 #       $ prog nota
 # ------------------------------------------
 ERR_NARGS=1
-ERR_VALOR=2
+ERR_CONDS=2
 # 1) Validar arguments
 if [ $# -ne 1 ]
 then
@@ -33,4 +33,4 @@ then
 if  [ $nom ! -d -a $nom ! -h -a $nom ! -f] 
 then
     echo "$nom no valida cap condicio"
-    exit 1 
+    exit $ERR_CONDS
