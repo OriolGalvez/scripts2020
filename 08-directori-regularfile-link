@@ -30,7 +30,7 @@ if  [ $nom -f ]
 then
     echo "$nom es un regular file"
     exit 0
-if  [ $nom ! -d ] 
+if  [ $nom ! -d -a $nom ! -h -a $nom ! -f] 
 then
-    echo "$nom es un directori"
-    exit 0 
+    echo "$nom no valida cap condicio"
+    exit 1 
